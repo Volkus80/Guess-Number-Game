@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px #b9b5b5;
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../images/nums.jpg);
+}
+.container-item {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-item.answer {
+  justify-content: left;
+  margin-left: 15px;
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+.container-text {
+  font-size: 25px;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 20px 10px;
+}
+@keyframes move {
+  from {
+    margin-left: 15px;
+  }
+  to {
+    margin-left: 330px;
+  }
+}
+.input {
+  overflow: hidden;
+}
+.input-text {
+  height: 80%;
+  outline: none;
+  text-align: center;
+  border: transparent;
+  box-shadow: inset 0 0 3px 5px #94f894;
+  border-radius: 15px;
+  font-size: 30px;
+  max-width: 100px;
+}
+.answer {
+  color: white;
+  font-size: 30px;
+}
+.answer-text {
+  background-color: #c51111;
+  padding: 20px 30px;
+  border-radius: 100%;
+  position: relative;
+  box-shadow: 0 0 10px 10px #90d8f5;
+}
+.confirm-button {
+  font-size: 20px;
+  color: white;
+  background-color: #6e98f1;
+  padding: 15px;
+  border-radius: 10px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+.confirm-button:hover {
+  transform: scale(1.1);
+}
