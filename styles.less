@@ -4,8 +4,17 @@ padding: 0;
 box-sizing: border-box;
 }
 
+body {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
 .container {
-    max-width: 500px;
+    width: 500px;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px rgb(185, 181, 181);
@@ -20,12 +29,15 @@ box-sizing: border-box;
         justify-content: center;
         &.answer {
             justify-content: left;
-            margin-left: 15px;
+            margin-left: 169px;
+            &.active {
+            
             animation-name: move;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-duration: 1.5s;
+            animation-direction: normal;
+            animation-duration: 3s;
+            }
         }
                 
     }
@@ -38,13 +50,11 @@ box-sizing: border-box;
     }
 }
 @keyframes move {
-    from {
-        margin-left: 15px;
-    }
-    to {
-        margin-left:330px;
-    }
+    0%, 100% {margin-left: 169px}
+    25% {margin-left: 15px;}
+    75% {margin-left: 330px;}
 }
+
 .input {
     overflow: hidden;
     &-text {
@@ -56,11 +66,13 @@ box-sizing: border-box;
         border-radius: 15px;
         font-size: 30px;
         max-width: 100px;
+        background-color: white;
     }   
 }
 .answer {
     color: white;
     font-size: 30px;
+    
     
 
     &-text {
@@ -69,6 +81,12 @@ box-sizing: border-box;
     border-radius: 100%;
     position:relative;
     box-shadow: 0 0 10px 10px rgb(144, 216, 245);
+    cursor: pointer;
+    transition: linear .5s;
+    &:hover {
+        transform: scale(1.1);
+        
+    }
     
 
     }
